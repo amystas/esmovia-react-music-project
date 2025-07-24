@@ -3,7 +3,7 @@
 :root {
   --card-radius: 10px;
   --card-border: #ddd;
-  --card-bg: #ffffff;
+  --card-bg: #59626A;
   --card-hover-shadow: rgba(0, 0, 0, 0.15);
   --card-shadow: rgba(0, 0, 0, 0.05);
   --accent-known: #4caf50;
@@ -31,7 +31,9 @@
   transition: transform 0.2s ease, box-shadow 0.3s ease;
   overflow: hidden;
 }
-
+#articles article.artist-card .bio{
+    color: white;
+}
 #articles article.artist-card:hover {
   transform: scale(1.015);
   box-shadow: 0 8px 16px var(--card-hover-shadow);
@@ -58,13 +60,13 @@
   margin: 0 0 0.6rem;
   font-size: 1.5rem;
   font-weight: 600;
-  color: #222;
+  color: white;
 }
 
 #articles article.artist-card .age {
   margin: 0 0 0.5rem;
   font-size: 1rem;
-  color: #555;
+  color: #D7DBDF;
 }
 
 #articles article.artist-card .age.is-unknown {
@@ -76,7 +78,7 @@
   margin: 0;
   font-weight: 500;
   font-size: 1rem;
-  color: #333;
+  color: white;
 }
 .artist-card img {
   width: 400px;
