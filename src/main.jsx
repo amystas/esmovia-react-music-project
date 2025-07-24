@@ -7,6 +7,6 @@ import Genres from './Genres.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Genres />
+    <App />
   </StrictMode>,
 )
