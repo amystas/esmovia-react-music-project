@@ -7,6 +7,6 @@ import MainPage from './MainPage.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <MainPage/>
-  </StrictMode>,
+    <App />
+  </StrictMode>
 )
