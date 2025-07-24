@@ -1,7 +1,16 @@
-
+import { useState } from "react"
 
 
 function MainPage() {
+
+    const [news, setNews]=useState(56);
+
+    setInterval(() => {
+    setNews(news+1);
+    console.log("Counter:", news);
+    }, 3000); // 3000 ms = 3 seconds
+
+
     return (
         <div>
             <nav className="navbar bg-dark">
@@ -61,7 +70,7 @@ function MainPage() {
 
 
                     <section className="row" id="news">
-                        <h1>News</h1>
+                        <h1>News <span class="badge text-bg-secondary">{news}</span></h1>
                         <div className="col">
                             <div className="card">
                                 <div className="card-header">
