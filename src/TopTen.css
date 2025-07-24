@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+  --card-radius: 10px;
+  --card-border: #ddd;
+  --card-bg: #ffffff;
+  --card-hover-shadow: rgba(0, 0, 0, 0.15);
+  --card-shadow: rgba(0, 0, 0, 0.05);
+  --accent-known: #4caf50;
+  --accent-unknown: #ff9800;
+}
+
+/* Kontener */
+#articles {
+  max-width: 800px;
+  margin: 3rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-family: 'Poppins', system-ui, sans-serif;
+}
+
+/* Karta artysty */
+#articles article.artist-card {
+  position: relative;
+  background: var(--card-bg);
+  padding: 1.5rem 2rem 1.5rem 2.5rem;
+  border: 1px solid var(--card-border);
+  border-radius: var(--card-radius);
+  box-shadow: 0 2px 4px var(--card-shadow);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+#articles article.artist-card:hover {
+  transform: scale(1.015);
+  box-shadow: 0 8px 16px var(--card-hover-shadow);
+}
+
+/* Pasek akcentowy */
+#articles article.artist-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 6px;
+  background: var(--accent-known);
+  border-top-left-radius: var(--card-radius);
+  border-bottom-left-radius: var(--card-radius);
+}
+
+#articles article.artist-card.unknown-age::before {
+  background: var(--accent-unknown);
+}
+
+#articles article.artist-card h2 {
+  margin: 0 0 0.6rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #222;
+}
+
+#articles article.artist-card .age {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+#articles article.artist-card .age.is-unknown {
+  font-style: italic;
+  opacity: 0.6;
+}
+
+#articles article.artist-card .song {
+  margin: 0;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #333;
+}
+.artist-card img {
+  width: 400px;
+  height: 400px;
+  object-fit: contain;         /* pokazuje całe zdjęcie, bez przycinania */
+  border-radius: 8px;
+  
+  margin: 0 auto 1rem;         /* centrowanie poziome */
+  display: block;              /* konieczne do margin: auto */
+}
