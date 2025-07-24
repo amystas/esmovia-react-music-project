@@ -27,23 +27,32 @@ function CatchADog() {
   }, []);
 
   return (
-    <div style={{ textAlign: 'center', padding: '2rem' }}>
-      <h1>Catch a Dog</h1>
-      {loading && <p>Loading...</p>}
-      {error && <p style={{ color: 'red' }}>Error: {error}</p>}
-      {dogImage && !loading && (
-        <img
-          src={dogImage}
-          alt="A Random Dog"
-          style={{ maxWidth: '100%', height: 'auto', borderRadius: '8px' }}
-        />
-      )}
-      <div style={{ marginTop: '1rem' }}>
-        <button onClick={fetchDogImage} disabled={loading}>
-          {loading ? 'Fetching...' : 'Fetch New Dog'}
-        </button>
+    <main className="container-fluid flex-grow-1 py-4">
+      <div className="row justify-content-center">
+        <div className="col-lg-8 col-xl-6">
+          <h1 className="display-4 text-center mb-4">Catch a Dog</h1>
+          <div className="card bg-secondary text-light p-4 text-center">
+            {loading && <p>Loading...</p>}
+            {error && <p className="text-danger">Error: {error}</p>}
+            {dogImage && !loading && (
+              <img
+                src={dogImage}
+                alt="A Random Dog"
+                className="img-fluid rounded mb-3"
+                style={{ maxHeight: '320px', objectFit: 'cover', width: '100%' }}
+              />
+            )}
+            <button
+              className="btn btn-primary custom-btn"
+              onClick={fetchDogImage}
+              disabled={loading}
+            >
+              {loading ? 'Fetching...' : 'Fetch New Dog'}
+            </button>
+          </div>
+        </div>
       </div>
-    </div>
+    </main>
   );
 }
 
