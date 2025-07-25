@@ -23,24 +23,24 @@ function MainPage() {
                 <nav className="row">
 
                     <div className="col">
-                        <a href="genres.html">
+                        <Link to="/genres">
                             <div className="card text-bg-dark">
                                 <img src="main_page_images/muzyka_ludowa_16_9.webp" className="card-img" alt="..." height="200px" />
                                 <div className="card-img-overlay">
                                     <h5 className="card-title">Genres</h5>
                                 </div>
                             </div>
-                        </a>
+                        </Link>
                     </div>
                     <div className="col">
-                        <a href="topten.html">
+                        <Link to="/top-ten">
                             <div className="card text-bg-dark">
                                 <img src="main_page_images/artists.webp" className="card-img" alt="..." height="200px" />
                                 <div className="card-img-overlay">
                                     <h5 className="card-title">Top 10 artists</h5>
                                 </div>
                             </div>
-                        </a>
+                        </Link>
                     </div>
                     <div className="col">
                         <a href="about.html">
