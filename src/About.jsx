@@ -1,6 +1,59 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const AboutUs = () => {
+  useEffect(() => {
+    // Inject custom toast styles once
+    if (!document.getElementById('custom-toast-style')) {
+      const style = document.createElement('style');
+      style.id = 'custom-toast-style';
+      style.innerHTML = `
+        .custom-toast {
+          background-color: #007bff !important;
+          border: none;
+          box-shadow: 0 4px 16px 0 rgba(0,123,255,0.15);
+          transition: transform 0.3s cubic-bezier(.68,-0.55,.27,1.55), opacity 0.3s;
+          animation: toast-in 0.4s cubic-bezier(.68,-0.55,.27,1.55);
+          position: fixed;
+          top: 1rem;
+          right: 1rem;
+          z-index: 9999;
+        }
+        .custom-toast.plop-out {
+          animation: plop 0.35s cubic-bezier(.68,-0.55,.27,1.55);
+        }
+        @keyframes toast-in {
+          0% {
+            transform: translateX(120%) scale(0.9);
+            opacity: 0.2;
+          }
+          60% {
+            transform: translateX(-10%) scale(1.05);
+            opacity: 1;
+          }
+          100% {
+            transform: translateX(0) scale(1);
+            opacity: 1;
+          }
+        }
+        @keyframes plop {
+          0% {
+            transform: scale(1);
+            opacity: 1;
+          }
+          60% {
+            transform: scale(1.15);
+            opacity: 1;
+          }
+          100% {
+            transform: scale(0.7);
+            opacity: 0;
+          }
+        }
+      `;
+      document.head.appendChild(style);
+    }
+  }, []);
+
   const validateAndSend = (e) => {
     e.preventDefault();
     const name = e.target.name.value.trim();
@@ -50,7 +103,6 @@ const AboutUs = () => {
 
   return (
     <div className="bg-dark text-light" data-bs-theme="dark">
-
       <main className="container">
         <section className="mb-5">
           <h1 className="display-4 mb-3">Our team</h1>
@@ -111,7 +163,9 @@ const AboutUs = () => {
               <label htmlFor="message">Message</label>
               <textarea className="form-control bg-dark text-light border-secondary" id="message" name="message" rows="4" placeholder="Type your message" required minLength="10" maxLength="500" />
             </div>
-            <button type="submit" className="btn btn-primary custom-btn">Send</button>
+            <div className="mt-5">
+              <button type="submit" className="btn btn-primary custom-btn">Send</button>
+            </div>
           </form>
           <div id="toast-container"></div>
         </section>
