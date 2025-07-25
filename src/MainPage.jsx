@@ -25,7 +25,7 @@ function MainPage() {
                     <div className="col">
                         <a href="genres.html">
                             <div className="card text-bg-dark">
-                                <img src="muzyka_ludowa_16_9.webp" className="card-img" alt="..." height="200px" />
+                                <img src="main_page_images/muzyka_ludowa_16_9.webp" className="card-img" alt="..." height="200px" />
                                 <div className="card-img-overlay">
                                     <h5 className="card-title">Genres</h5>
                                 </div>
@@ -35,9 +35,9 @@ function MainPage() {
                     <div className="col">
                         <a href="topten.html">
                             <div className="card text-bg-dark">
-                                <img src="people.avif" className="card-img" alt="..." height="200px" />
+                                <img src="main_page_images/artists.webp" className="card-img" alt="..." height="200px" />
                                 <div className="card-img-overlay">
-                                    <h5 className="card-title text-dark">Top 10 artists</h5>
+                                    <h5 className="card-title">Top 10 artists</h5>
                                 </div>
                             </div>
                         </a>
@@ -45,7 +45,7 @@ function MainPage() {
                     <div className="col">
                         <a href="about.html">
                             <div className="card text-bg-dark">
-                                <img src="people.avif" className="card-img" alt="..." height="200px" />
+                                <img src="main_page_images/people.avif" className="card-img" alt="..." height="200px" />
                                 <div className="card-img-overlay">
                                     <h5 className="card-title text-dark">About us</h5>
                                 </div>
@@ -66,7 +66,7 @@ function MainPage() {
                                 <div className="card-header">
                                     Featured
                                 </div>
-                                <img src="accordion.jpg" className="card-img-top" alt="..." />
+                                <img src="main_page_images/accordion.jpg" className="card-img-top" alt="..." />
                                 <div className="card-body">
                                     <h5 className="card-title">Special title treatment</h5>
                                     <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -80,7 +80,7 @@ function MainPage() {
                                 <div className="card-header">
                                     Featured
                                 </div>
-                                <img src="newspaper.jpg" className="card-img-top" alt="..." />
+                                <img src="main_page_images/newspaper.jpg" className="card-img-top" alt="..." />
                                 <div className="card-body">
                                     <h5 className="card-title">Special title treatment</h5>
                                     <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -94,7 +94,7 @@ function MainPage() {
                                 <div className="card-header">
                                     Featured
                                 </div>
-                                <img src="GrandPiano-EKX_BG.jpg" className="card-img-top" alt="..." />
+                                <img src="main_page_images/GrandPiano-EKX_BG.jpg" className="card-img-top" alt="..." />
                                 <div className="card-body">
                                     <h5 className="card-title">Special title treatment</h5>
                                     <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
