@@ -44,14 +44,14 @@ function MainPage() {
                         </Link>
                     </div>
                     <div className="col">
-                        <a href="about.html">
+                        <Link to="/about-us">
                             <div className="card text-bg-dark">
                                 <img src="main_page_images/people.avif" className="card-img" alt="..." height="200px" />
                                 <div className="card-img-overlay">
                                     <h5 className="card-title text-dark">About us</h5>
                                 </div>
                             </div>
-                        </a>
+                        </Link>
                     </div>
 
 
