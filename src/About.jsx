@@ -107,7 +107,7 @@ const AboutUs = () => {
         <section className="mb-5">
           <h1 className="display-4 mb-3">Our team</h1>
           <div className="banner-box">
-            <img src="us.jpg" alt="Banner" className="img-fluid rounded" />
+            <img src="main_page_images/Us.jpg" alt="Banner" className="img-fluid rounded" />
           </div>
           <h2 className="h4 text-secondary mb-4">We’re building the future of music communities.</h2>
           <div className="card bg-secondary text-light mb-4">
