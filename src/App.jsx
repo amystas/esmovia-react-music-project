@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { HashRouter, Route, Routes } from 'react-router-dom'
 import Layout from './Layout'
 import MainPage from './MainPage'
 import CatchADog from './CatchADog'
@@ -13,7 +13,7 @@ function App() {
 
   return (
     <>
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<MainPage />} />
@@ -23,7 +23,7 @@ function App() {
           <Route path="dogs-api" element={<CatchADog />} />
         </Route>
       </Routes>
-    </BrowserRouter> 
+    </HashRouter> 
     </>
   )
 }
